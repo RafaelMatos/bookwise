@@ -1,40 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BookWise 📖
 
-## Getting Started
+Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha React do curso Ignite na Rocketseat🚀 , utilizando Next como principal ferramenta. Vamos criar uma aplicação completa até o deploy. Abordaremos rotas autenticadas no Next.js conceito de Backend-for-Frontend e muito mais!
 
-First, run the development server:
+<img src='./public/tela.png' alt='Imagem da tela da aplicação BookWise'>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<!-- <details>
+    <summary>Responsivo</summary>
+    <img src='./src/assets/responsive.png' alt='print da tela da aplicação Ignite Call'>
+</details> -->
+
+## Tecnologias usadas ⚙
+
+- Next.js
+- React.js
+- Typescript
+<!-- - Ignite-ui
+- Zod
+- React Hook Form
+- Prisma
+- Axios
+- Nookies
+- NextAuth.js
+- DayJs
+- Google Apis -->
+
+## Atualizações 🔃
+
+  <details>
+    <summary>Histórico</summary>
+
+      
+
+    
+</details>
+
+  - Layout da pagina home criada
+
+  <!-- <img src='./src/assets/update.gif' alt='gif da tela da aplicação Ignite Call'> -->
+  
+  
+
+## Como utilizar
+
+- Clone o projeto do repositório
+
+```
+git clone https://github.com/RafaelMatos/bookwise
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Acesse a pasta do projeto
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+cd bookwise
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Instale as dependências
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+npm install
+```
+- Criar arquivo .env com as chaves necessarias( seguir arquivo .envExample)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Inicializa o Prisma( Usar banco de dados de sua preferencia, no exemplo é usado o mysql)
 
-## Learn More
+```
+npx prisma init --datasource-provider mysql
+```
+- Realiza as migrations do Prisma
 
-To learn more about Next.js, take a look at the following resources:
+```
+npx prisma migrate dev --name init
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Execute o projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run dev
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Acesse no navegador o endereço indicado no terminal
