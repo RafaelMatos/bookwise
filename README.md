@@ -14,13 +14,13 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
 - Next.js
 - React.js
 - Typescript
+- NextAuth.js
 <!-- - Ignite-ui
 - Zod
 - React Hook Form
 - Prisma
 - Axios
 - Nookies
-- NextAuth.js
 - DayJs
 - Google Apis -->
 
@@ -35,6 +35,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
 </details>
 
   - Layout da pagina home criada
+  - Configurando NextAuth para autenticação com providers
 
   <!-- <img src='./src/assets/update.gif' alt='gif da tela da aplicação Ignite Call'> -->
   

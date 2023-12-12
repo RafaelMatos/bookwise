@@ -1,12 +1,13 @@
 import AuthButtons from "@/components/AuthButtons";
 import { Heading, Text } from "@/components/Typography";
 import { LoginContainer, LogoSection,WelcomeSection } from "@/styles/login"
+import Image from "next/image";
 
 export default function Login(){
   return(
     <LoginContainer>
       <LogoSection>
-        <img src="/images/Logo-BookWise.png"></img>
+        <Image src="/images/Logo-BookWise.png" alt="BookWise Logo" width={232} height={58}/>
       </LogoSection>
       <WelcomeSection>
           <Heading>Boas vindas!</Heading>
