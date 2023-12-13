@@ -19,4 +19,10 @@ export const AuthButton = styled('button',{
   display:'flex' ,
   alignItems:'center',
   gap:'$5' ,
+  transition: '0.5s ease-in-out',
+  '&:hover':{
+    img:{
+      scale:'1.1'
+    }
+  }
 })

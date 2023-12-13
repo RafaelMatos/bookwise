@@ -36,6 +36,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
 
   - Layout da pagina home criada
   - Configurando NextAuth para autenticação com providers
+  - Fazendo autenticação com Github
 
   <!-- <img src='./src/assets/update.gif' alt='gif da tela da aplicação Ignite Call'> -->
   
