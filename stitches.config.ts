@@ -45,6 +45,9 @@ export const { styled, getCssText, globalCss, theme } = createStitches({
 			white: '#FFFFFF',
       black: '#000000',
 
+      red100:'#F75A68',
+      red200:'#F64251',
+
       green100: '#50B2C0',
       green200: '#255D6A',
       green300: '#0A313C',
