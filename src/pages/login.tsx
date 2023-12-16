@@ -1,6 +1,6 @@
 import AuthButtons from "@/components/AuthButtons";
 import { Heading, Text } from "@/components/Typography";
-import { LoginContainer, LogoSection,WelcomeSection } from "@/styles/login"
+import { LoginContainer, LogoSection,WelcomeSection } from "@/styles/pages/login"
 import Head from "next/head";
 import Image from "next/image";
 
