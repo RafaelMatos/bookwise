@@ -38,6 +38,8 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
   - Configurando NextAuth para autenticação com providers
   - Fazendo autenticação com Github
   - Fazendo autenticação com Google
+  - Iniciado layout da aplicação
+  - Criado sidebar da aplicação
 
   <!-- <img src='./src/assets/update.gif' alt='gif da tela da aplicação Ignite Call'> -->
   
