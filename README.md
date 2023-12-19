@@ -40,8 +40,9 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
   - Fazendo autenticação com Google
   - Iniciado layout da aplicação
   - Criado sidebar da aplicação
+  - Criando sessão de ultimas avaliações
 
-  <!-- <img src='./src/assets/update.gif' alt='gif da tela da aplicação Ignite Call'> -->
+ <img src='./public/update.gif' alt='gif de atualização da aplicação Book Wise'> 
   
   
 

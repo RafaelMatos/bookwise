@@ -7,7 +7,6 @@ export const Container = styled('div', {
   flexDirection: 'column',
   overflowY: 'auto',
   gap: '$3',
-  border: '1px solid $gray300',
   paddingBottom: 40,
 
   '&::-webkit-scrollbar': {

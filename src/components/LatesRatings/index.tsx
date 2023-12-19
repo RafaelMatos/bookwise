@@ -23,17 +23,11 @@ export default function LatesRatings() {
             <RatingCard
               key={i}
               rating={{
-                id: 'aa',
+                id: faker.string.uuid(),
                 rate: faker.number.int({ min: 0, max: 5 }),
                 description: faker.lorem.lines(),
                 created_at: faker.date.past(),
-                user: {
-                  id: faker.string.uuid(),
-                  email: 'rafael@email.com',
-                  name: faker.person.fullName(),
-                  avatar_url: faker.image.avatar(),
-                  created_at: new Date(),
-                },
+                user: generateSingleUser(),
                 book: generateSingleBook(),
               }}
             />
