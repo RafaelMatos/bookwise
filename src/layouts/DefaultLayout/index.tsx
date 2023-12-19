@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import { Container, Content } from './styles'
 import Head from 'next/head'
 import SideBar from '@/components/Sidebar'
+import { Text } from '@/components/Typography'
 
 type DefaultLayoutProps = {
   children: ReactNode
@@ -16,7 +17,9 @@ export const DefaultLayout = ({ title, children }: DefaultLayoutProps) => {
       </Head>
       <SideBar />
 
-      <Content>{children}</Content>
+      <Content>
+        {children}
+      </Content>
     </Container>
   )
 }

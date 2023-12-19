@@ -5,7 +5,6 @@ export const Container = styled('main', {
   height: '100vh',
   display: 'grid',
   gridTemplateColumns: 'auto 1fr',
-  background: '$purple200',
 })
 
 export const Content = styled('div', {
@@ -14,5 +13,4 @@ export const Content = styled('div', {
   maxWidth: 996,
   margin: '0 auto',
   paddingTop: 72,
-  background: '$purple100',
 })
