@@ -15,6 +15,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
 - React.js
 - Typescript
 - NextAuth.js
+- Prisma
 <!-- - Ignite-ui
 - Zod
 - React Hook Form
@@ -29,18 +30,17 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
   <details>
     <summary>Histórico</summary>
 
-      
-
-    
+    - Layout da pagina home criada
+    - Configurando NextAuth para autenticação com providers
+    - Fazendo autenticação com Github
+    - Fazendo autenticação com Google
+    - Iniciado layout da aplicação
+    - Criado sidebar da aplicação
 </details>
 
-  - Layout da pagina home criada
-  - Configurando NextAuth para autenticação com providers
-  - Fazendo autenticação com Github
-  - Fazendo autenticação com Google
-  - Iniciado layout da aplicação
-  - Criado sidebar da aplicação
   - Criando sessão de ultimas avaliações
+  - Criando sessão Livros populares 
+  - Feito seed de informações no banco de dados
 
  <img src='./public/update.gif' alt='gif de atualização da aplicação Book Wise'> 
   
