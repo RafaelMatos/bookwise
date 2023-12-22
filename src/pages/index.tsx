@@ -4,15 +4,15 @@ import { NextPageWithLayout } from './_app'
 import { DefaultLayout } from '@/layouts/DefaultLayout'
 import { HomeContainer } from '@/styles/pages/home'
 import LatesRatings from '@/components/LatesRatings'
+import PopularBooks from '@/components/PopularBooks'
 
 const HomePage: NextPageWithLayout = () => {
   const router = useRouter()
   const { data } = useSession()
   return (
     <HomeContainer>
-      <LatesRatings/>
-      <div>Grid2</div>
-
+      <LatesRatings />
+      <PopularBooks />
     </HomeContainer>
   )
 }

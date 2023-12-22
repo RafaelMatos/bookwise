@@ -27,7 +27,7 @@ export function generateSingleUser() {
       lastName,
     }),
     name: faker.person.fullName(),
-    avatar_url: faker.image.avatar(),
+    avatar_url: faker.image.avatarLegacy(),
     created_at: new Date(),
   }
 }
