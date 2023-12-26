@@ -34,6 +34,8 @@ export default function RatingCard({ rating }: RatingCardProps) {
     toogleShowMore,
   } = useToggleShowMore(rating.book.summary, MAX_SUMMARY_LENGTH)
 
+  const bookImageUrl = rating.book.cover_url.slice(6)
+
   return (
     <Container>
       <UserDetails>
@@ -42,7 +44,7 @@ export default function RatingCard({ rating }: RatingCardProps) {
             <Avatar
               src={rating.user.avatar_url!}
               size="sm"
-              alt={`Avatar do usuário`}
+              alt={`Avatar do usuário ${rating.user.name}`}
             />
           </Link>
           <div>
@@ -57,7 +59,7 @@ export default function RatingCard({ rating }: RatingCardProps) {
       <BookDetails>
         <Link href={`/explore?book=${rating.book_id}`}>
           <BookImage
-            src={rating.book.cover_url}
+            src={bookImageUrl}
             width={108}
             height={152}
             alt={rating.book.name}

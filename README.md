@@ -16,6 +16,8 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
 - Typescript
 - NextAuth.js
 - Prisma
+- TanStack
+- Axios
 <!-- - Ignite-ui
 - Zod
 - React Hook Form

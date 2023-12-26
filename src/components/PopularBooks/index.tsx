@@ -17,21 +17,19 @@ export default function PopularBooks() {
       <section>
         {' '}
         {Array.from({ length: 5 }).map((_, i) => {
-          const subjectName = faker.animal.type()
           return (
             <BookCard
               key={`popular-${i}`}
               book={{
-                id: faker.string.uuid(),
-                name: faker.lorem.sentence(),
-                author: faker.person.fullName(),
-                summary: faker.lorem.text(),
-                cover_url: faker.image.urlLoremFlickr({
-                  category: subjectName,
-                }),
-                total_pages: faker.number.int({ min: 10, max: 999 }),
-                created_at: faker.date.past(),
-                avgRating: faker.number.int({ min: 0, max: 5 }),
+                id: 'effea',
+                name: 'Rafael',
+                author: 'Matos',
+                summary:
+                  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, officiis?',
+                cover_url: 'https://github.com/RafaelMatos.png',
+                total_pages: 300,
+                created_at: new Date(),
+                avgRating: 3,
               }}
             />
           )
