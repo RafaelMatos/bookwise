@@ -1,13 +1,27 @@
 import { Book } from '@prisma/client'
-import BookCard from '../BookCard'
+import BookCard, { BookWithAvgRating } from '../BookCard'
 import { Text } from '../Typography'
 import { Link } from '../ui/Link'
 import { Container } from './styles'
 import { generateSingleBook } from '@/utils/generateBook'
 import { faker } from '@faker-js/faker'
+import { useQuery } from '@tanstack/react-query'
+import { api } from '@/lib/axios'
+import popular from '@/pages/api/books/popular'
+import { books } from '../../../prisma/constants/books'
 
 export default function PopularBooks() {
   const book = { book: generateSingleBook(), avgRating: 4 }
+
+  const { data: popularBooks } = useQuery<BookWithAvgRating[]>({
+    queryKey: ['popular-books'],
+
+    queryFn: async () => {
+      const { data } = await api.get('/books/popular')
+
+      return data?.books ?? []
+    },
+  })
   return (
     <Container>
       <header>
@@ -16,23 +30,8 @@ export default function PopularBooks() {
       </header>
       <section>
         {' '}
-        {Array.from({ length: 5 }).map((_, i) => {
-          return (
-            <BookCard
-              key={`popular-${i}`}
-              book={{
-                id: 'effea',
-                name: 'Rafael',
-                author: 'Matos',
-                summary:
-                  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, officiis?',
-                cover_url: 'https://github.com/RafaelMatos.png',
-                total_pages: 300,
-                created_at: new Date(),
-                avgRating: 3,
-              }}
-            />
-          )
+        {popularBooks?.map((book) => {
+          return <BookCard key={`popular-${book.id}`} book={book} />
         })}
       </section>
     </Container>

@@ -1,6 +1,6 @@
 import { Book } from '@prisma/client'
 import { BookContent, BookImage, BookName, Container } from './styles'
-import { Heading, Text } from '../Typography'
+import { Text } from '../Typography'
 import RatingStars from '../RatingStars'
 
 export type BookWithAvgRating = Book & {
@@ -22,13 +22,13 @@ export default function BookCard({ book, size = 'md' }: BookCardProps) {
       height: 151,
     },
   }
-
+  const bookImageUrl = book.cover_url.slice(6)
   const currentSize = IMAGE_SIZES[size]
 
   return (
     <Container>
       <BookImage
-        src={book.cover_url}
+        src={bookImageUrl}
         alt={book.name}
         width={currentSize.width}
         height={currentSize.height}
