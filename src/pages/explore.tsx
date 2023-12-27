@@ -11,10 +11,28 @@ import { Input } from '@/components/Form/Input'
 import { useState } from 'react'
 import { Tag } from '@/components/ui/Tag'
 import { faker } from '@faker-js/faker'
+import { api } from '@/lib/axios'
+import { useQuery } from '@tanstack/react-query'
+
+type Category = {
+  id: string
+  name: string
+}
 
 const ExplorePage: NextPageWithLayout = () => {
   const [search, setSearch] = useState<string>('')
-  console.log('Search: ', search)
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+
+  const { data: categories } = useQuery<Category[]>({
+    queryKey: ['categories'],
+
+    queryFn: async () => {
+      const { data } = await api.get('/books/categories')
+
+      return data?.categories ?? []
+    },
+  })
+
   return (
     <ExploreContainer>
       <header>
@@ -36,10 +54,20 @@ const ExplorePage: NextPageWithLayout = () => {
       </header>
 
       <TagsContainer>
-        {Array.from({ length: 15 }).map((_, i) => {
+        <Tag
+          active={selectedCategory === null}
+          onClick={() => setSelectedCategory(null)}
+        >
+          Tudo
+        </Tag>
+        {categories?.map((category) => {
           return (
-            <Tag key={i} active={faker.datatype.boolean()}>
-              {faker.animal.type()}
+            <Tag
+              key={`category-${category.name}`}
+              active={selectedCategory === category.id}
+              onClick={() => setSelectedCategory(category.id)}
+            >
+              {category.name}
             </Tag>
           )
         })}

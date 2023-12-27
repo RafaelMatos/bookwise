@@ -18,6 +18,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
 - Prisma
 - TanStack
 - Axios
+- React-query
 <!-- - Ignite-ui
 - Zod
 - React Hook Form
