@@ -48,6 +48,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
   - Criando página explore
   - Página explore retornando categorias de livros
   - Página explore retornando card de livros e fazendo filtragem por categoria
+  - Adicionada busca de livros por nome do livro ou autor
 
  <img src='./public/update.gif' alt='gif de atualização da aplicação Book Wise'> 
   
