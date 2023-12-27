@@ -13,6 +13,7 @@ import { Tag } from '@/components/ui/Tag'
 import { api } from '@/lib/axios'
 import { useQuery } from '@tanstack/react-query'
 import BookCard, { BookWithAvgRating } from '@/components/BookCard'
+import { Text } from '@/components/Typography'
 
 type Category = {
   id: string
@@ -44,6 +45,13 @@ const ExplorePage: NextPageWithLayout = () => {
 
       return data?.books ?? []
     },
+  })
+
+  const filteredBooks = books?.filter((book) => {
+    return (
+      book.name.toLowerCase().includes(search.toLowerCase()) ||
+      book.author.toLowerCase().includes(search.toLowerCase())
+    )
   })
 
   return (
@@ -87,7 +95,15 @@ const ExplorePage: NextPageWithLayout = () => {
       </TagsContainer>
 
       <BookGrid>
-        {books?.map((book) => <BookCard key={book.id} size="md" book={book} />)}
+        {filteredBooks && filteredBooks.length ? (
+          filteredBooks.map((book) => (
+            <BookCard key={book.id} size="md" book={book} />
+          ))
+        ) : (
+          <Text size="md" color="gray-400">
+            Desculpe, não encontramos seu livro!
+          </Text>
+        )}
       </BookGrid>
     </ExploreContainer>
   )
