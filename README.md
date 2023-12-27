@@ -39,11 +39,15 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
     - Fazendo autenticação com Google
     - Iniciado layout da aplicação
     - Criado sidebar da aplicação
+    - Criando sessão de ultimas avaliações
+    - Criando sessão Livros populares 
+    - Feito seed de informações no banco de dados
 </details>
 
-  - Criando sessão de ultimas avaliações
-  - Criando sessão Livros populares 
-  - Feito seed de informações no banco de dados
+  - Sessão ultimas avaliações e livros populares retornando livros do banco
+  - Criando página explore
+  - Página explore retornando categorias de livros
+  - Página explore retornando card de livros e fazendo filtragem por categoria
 
  <img src='./public/update.gif' alt='gif de atualização da aplicação Book Wise'> 
   

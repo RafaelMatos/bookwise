@@ -10,9 +10,9 @@ import { Binoculars, MagnifyingGlass } from '@phosphor-icons/react'
 import { Input } from '@/components/Form/Input'
 import { useState } from 'react'
 import { Tag } from '@/components/ui/Tag'
-import { faker } from '@faker-js/faker'
 import { api } from '@/lib/axios'
 import { useQuery } from '@tanstack/react-query'
+import BookCard, { BookWithAvgRating } from '@/components/BookCard'
 
 type Category = {
   id: string
@@ -30,6 +30,19 @@ const ExplorePage: NextPageWithLayout = () => {
       const { data } = await api.get('/books/categories')
 
       return data?.categories ?? []
+    },
+  })
+
+  const { data: books } = useQuery<BookWithAvgRating[]>({
+    queryKey: ['books', selectedCategory],
+    queryFn: async () => {
+      const { data } = await api.get('/books', {
+        params: {
+          category: selectedCategory,
+        },
+      })
+
+      return data?.books ?? []
     },
   })
 
@@ -73,7 +86,9 @@ const ExplorePage: NextPageWithLayout = () => {
         })}
       </TagsContainer>
 
-      <BookGrid></BookGrid>
+      <BookGrid>
+        {books?.map((book) => <BookCard key={book.id} size="md" book={book} />)}
+      </BookGrid>
     </ExploreContainer>
   )
 }

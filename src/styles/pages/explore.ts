@@ -3,8 +3,11 @@ import { styled } from '../../../stitches.config'
 export const ExploreContainer = styled('section', {
   width: '100%',
   height: '100%',
-  overflow: 'hidden',
+  overflowY: 'auto',
   flexDirection: 'column',
+  '&::-webkit-scrollbar': {
+    display: 'none',
+  },
 
   '> header': {
     display: 'flex',
@@ -27,7 +30,7 @@ export const BookGrid = styled('div', {
   gridAutoRows: 188,
   gap: '$5',
   overflowY: 'auto',
-  paddingBottom: 40,
+  paddingBottom: '$6',
 
   '&::-webkit-scrollbar': {
     display: 'none',
