@@ -19,6 +19,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
 - TanStack
 - Axios
 - React-query
+- Radix-ui
 <!-- - Ignite-ui
 - Zod
 - React Hook Form
@@ -49,6 +50,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
   - Página explore retornando categorias de livros
   - Página explore retornando card de livros e fazendo filtragem por categoria
   - Adicionada busca de livros por nome do livro ou autor
+  - Criado modal de detalhes do livro
 
  <img src='./public/update.gif' alt='gif de atualização da aplicação Book Wise'> 
   
