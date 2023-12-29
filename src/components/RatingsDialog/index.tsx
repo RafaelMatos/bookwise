@@ -15,6 +15,7 @@ import { BookWithAvgRating } from '../BookCard'
 import { Heading, Text } from '../Typography'
 import RatingStars from '../RatingStars'
 import { BookInfo } from './BookInfo'
+import { BookRatings } from '../BookRatings'
 
 type RatingDialogProps = {
   children: ReactNode
@@ -68,6 +69,7 @@ export const RatingsDialog = ({ children, book }: RatingDialogProps) => {
               />
             </BookInfos>
           </BookDetailsWrapper>
+          <BookRatings />
 
           <Dialog.Description />
         </DialogContent>

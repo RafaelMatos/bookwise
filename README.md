@@ -48,11 +48,18 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
   - Sessão ultimas avaliações e livros populares retornando livros do banco
   - Criando página explore
   - Página explore retornando categorias de livros
-  - Página explore retornando card de livros e fazendo filtragem por categoria
+  - <details>
+    <summary>Página explore retornando card de livros e fazendo filtragem por categoria</summary>
+    <img src='./public/update.gif' alt='gif de atualização da aplicação Book Wise'>
+    </details> 
   - Adicionada busca de livros por nome do livro ou autor
   - Criado modal de detalhes do livro
+  - <details>
+    <summary>Criando sessão de avaliações do livro</summary>
+    <img src='./public/update2.gif' alt='gif de atualização da aplicação Book Wise'>
+    </details>
 
- <img src='./public/update.gif' alt='gif de atualização da aplicação Book Wise'> 
+
   
   
 

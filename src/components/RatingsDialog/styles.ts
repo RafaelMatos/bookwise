@@ -14,8 +14,7 @@ export const DialogContent = styled(Dialog.Content, {
   right: 0,
   width: 660,
   height: '100%',
-  // background: '$gray800',
-  // boxShadow: '-4px 0px 30px #00000080',
+  boxShadow: '-4px 0px 30px #00000080',
   backdropFilter: 'blur(10px) saturate(180%)',
   '-webkit-backdrop-filter': 'blur(16px) saturate(200%)',
   backgroundColor: ' rgba(14, 17, 22, 0.50)',
@@ -56,10 +55,9 @@ export const DialogClose = styled(Dialog.Close, {
 export const BookDetailsWrapper = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  // background: '$gray700',
   backdropFilter: 'blur(10px) saturate(180%)',
   '-webkit-backdrop-filter': 'blur(16px) saturate(200%)',
-  backgroundColor: ' rgba(24, 28, 42, 0.50)',
+  backgroundColor: 'rgba(24, 28, 42, 0.50)',
   padding: '$6 $8',
   borderRadius: '$md',
 })
