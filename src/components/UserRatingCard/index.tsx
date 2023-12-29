@@ -3,8 +3,6 @@ import { Avatar } from '../ui/Avatar'
 import Link from 'next/link'
 import { Heading, Text } from '../Typography'
 import RatingStars from '../RatingStars'
-import { faker } from '@faker-js/faker'
-import { RatingWithAuthorAndBook } from '../RatingCard'
 import { Rating, User } from '@prisma/client'
 import { useSession } from 'next-auth/react'
 import { getRelativeTimeString } from '@/utils/getRelativeTimeString'
@@ -14,7 +12,7 @@ export type RatingWithAuthor = Rating & {
 }
 
 type UserRatingCardProps = {
-  rating: RatingWithAuthorAndBook
+  rating: RatingWithAuthor
 }
 
 export const UserRatingCard = ({ rating }: UserRatingCardProps) => {
@@ -35,7 +33,7 @@ export const UserRatingCard = ({ rating }: UserRatingCardProps) => {
             />
           </Link>
           <div>
-            <Heading size={'xs'}>Rafael Matos</Heading>
+            <Heading size={'xs'}>{rating.user.name}</Heading>
             <Text size="sm" color="gray-400">
               {distance}
             </Text>
