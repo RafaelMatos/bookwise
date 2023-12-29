@@ -43,9 +43,10 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
     - Criando sessão de ultimas avaliações
     - Criando sessão Livros populares 
     - Feito seed de informações no banco de dados
+    - Sessão ultimas avaliações e livros populares retornando livros do banco
 </details>
 
-  - Sessão ultimas avaliações e livros populares retornando livros do banco
+  
   - Criando página explore
   - Página explore retornando categorias de livros
   - <details>
@@ -58,6 +59,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
     <summary>Criando sessão de avaliações do livro</summary>
     <img src='./public/update2.gif' alt='gif de atualização da aplicação Book Wise'>
     </details>
+  - Modal de avaliação de livro recebendo do banco as informações do livro selecionado
 
 
   
