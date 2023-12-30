@@ -63,6 +63,10 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
   - Modal de avaliação de livro recebendo do banco as informações do livro selecionado
   - Criando formulario de avaliação de livro
   - Salvando novas avaliações dos livros
+  - <details>
+    <summary>Prevenindo de usuário não logado de fazer avaliação no livro</summary>
+    <img src='./public/update3.gif' alt='gif de atualização da aplicação Book Wise'>
+    </details>
 
 
   
