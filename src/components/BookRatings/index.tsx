@@ -3,9 +3,10 @@ import { Text } from '../Typography'
 import { RatingWithAuthor, UserRatingCard } from '../UserRatingCard'
 import { Link } from '../ui/Link'
 import { Container } from './styles'
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { RatingForm } from '../RatingForm'
 import { useSession } from 'next-auth/react'
+import { LoginDialog } from '../LoginDialog'
 
 type BookRatingsProps = {
   ratings: RatingWithAuthor[]
@@ -23,6 +24,8 @@ export const BookRatings = ({ ratings, bookId }: BookRatingsProps) => {
     setShowForm(true)
   }
 
+  const RatingWrapper = isAuthenticated ? Fragment : LoginDialog
+
   const sortedRatingsByDate = ratings.sort((a, b) => {
     return new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
   })
@@ -35,7 +38,11 @@ export const BookRatings = ({ ratings, bookId }: BookRatingsProps) => {
     <Container>
       <header>
         <Text>Avaliações</Text>
-        {canRate && <Link withoutIcon onClick={handleRate} text="Avaliar" />}
+        {canRate && (
+          <RatingWrapper>
+            <Link withoutIcon onClick={handleRate} text="Avaliar" />
+          </RatingWrapper>
+        )}
       </header>
       <section>
         {showForm && (

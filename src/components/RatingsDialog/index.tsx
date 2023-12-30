@@ -1,5 +1,5 @@
 import * as Dialog from '@radix-ui/react-dialog'
-import { ReactNode, useState } from 'react'
+import { ReactNode, useEffect, useState } from 'react'
 import {
   BookContent,
   BookDetailsContainer,
@@ -20,6 +20,7 @@ import { api } from '@/lib/axios'
 import { BookWithAvgRating } from '../BookCard'
 import { RatingWithAuthor } from '../UserRatingCard'
 import { CategoriesOnBooks, Category } from '@prisma/client'
+import { useRouter } from 'next/router'
 
 type BookDetails = BookWithAvgRating & {
   ratings: RatingWithAuthor[]
@@ -36,7 +37,22 @@ type RatingDialogProps = {
 export const RatingsDialog = ({ children, bookId }: RatingDialogProps) => {
   const [open, setOpen] = useState(false)
 
-  console.log('book id:', bookId)
+  const router = useRouter()
+  const paramBookId = router.query.book as string
+  useEffect(() => {
+    if (paramBookId === bookId) {
+      setOpen(true)
+    }
+  }, [bookId, paramBookId])
+
+  const onOpenChange = (open: boolean) => {
+    if (open) {
+      router.push(`/explore?book=${bookId}`, undefined, { shallow: true })
+    } else {
+      router.push('/explore')
+    }
+    setOpen(open)
+  }
 
   const { data: book } = useQuery<BookDetails>({
     queryKey: ['book', bookId],
@@ -56,7 +72,7 @@ export const RatingsDialog = ({ children, bookId }: RatingDialogProps) => {
   const ratingsLength = book?.ratings.length
 
   return (
-    <Dialog.Root open={open} onOpenChange={setOpen}>
+    <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
       <Dialog.Portal>
         <DialogOverlay />
