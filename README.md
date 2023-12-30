@@ -20,6 +20,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
 - Axios
 - React-query
 - Radix-ui
+- Zod
 <!-- - Ignite-ui
 - Zod
 - React Hook Form
@@ -61,6 +62,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
     </details>
   - Modal de avaliação de livro recebendo do banco as informações do livro selecionado
   - Criando formulario de avaliação de livro
+  - Salvando novas avaliações dos livros
 
 
   

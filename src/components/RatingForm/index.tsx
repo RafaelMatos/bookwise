@@ -12,7 +12,7 @@ import { FormEvent, useState } from 'react'
 import { Check, X } from '@phosphor-icons/react'
 import { TextArea } from '../Form/TextArea'
 import { ActionIcon } from '../ui/Actionicon'
-import { useMutation } from '@tanstack/react-query'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { api } from '@/lib/axios'
 
 type RatingFormProps = {
@@ -28,12 +28,23 @@ export const RatingForm = ({ bookId, onCancel }: RatingFormProps) => {
 
   const submitDisabled = !description.trim() // || !currentRate
 
+  const queryClient = useQueryClient()
+
   const { mutateAsync: handleRate } = useMutation({
     mutationFn: async () => {
       await api.post(`/books/${bookId}/rate`, {
         description,
         rate: currentRate,
       })
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ['book', bookId],
+      })
+      queryClient.invalidateQueries({
+        queryKey: ['books'],
+      })
+      onCancel()
     },
   })
 
@@ -59,7 +70,7 @@ export const RatingForm = ({ bookId, onCancel }: RatingFormProps) => {
           />
         </UserDetails>
       )}
-      <FormContainer>
+      <FormContainer onSubmit={handleSubmit}>
         <TextArea
           maxLength={450}
           placeholder="Escreva sua avaliação"

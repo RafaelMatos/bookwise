@@ -12,7 +12,7 @@ type BookRatingsProps = {
 }
 
 export const BookRatings = ({ ratings, bookId }: BookRatingsProps) => {
-  const [showForm, setShowForm] = useState(true)
+  const [showForm, setShowForm] = useState(false)
   function handleRate() {
     setShowForm(true)
   }
