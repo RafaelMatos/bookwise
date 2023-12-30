@@ -60,6 +60,7 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
     <img src='./public/update2.gif' alt='gif de atualização da aplicação Book Wise'>
     </details>
   - Modal de avaliação de livro recebendo do banco as informações do livro selecionado
+  - Criando formulario de avaliação de livro
 
 
   
@@ -86,10 +87,10 @@ npm install
 ```
 - Criar arquivo .env com as chaves necessarias( seguir arquivo .envExample)
 
-- Inicializa o Prisma( Usar banco de dados de sua preferencia, no exemplo é usado o mysql)
+- Inicializa o Prisma( Usar banco de dados de sua preferencia, no exemplo é usado o sqlite)
 
 ```
-npx prisma init --datasource-provider mysql
+npx prisma init --datasource-provider sqlite
 ```
 - Realiza as migrations do Prisma
 
