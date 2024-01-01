@@ -40,7 +40,7 @@ export default function RatingCard({ rating }: RatingCardProps) {
     <Container>
       <UserDetails>
         <section>
-          <Link href={`/profile/`}>
+          <Link href={`/profile/${rating.user.id}`}>
             <Avatar
               src={rating.user.avatar_url!}
               size="sm"

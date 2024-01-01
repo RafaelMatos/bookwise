@@ -8,7 +8,7 @@ export default async function handle(
 ) {
   if (req.method !== 'GET') return res.status(405).end()
 
-  const userId = String(req.query.usserId)
+  const userId = String(req.query.userId)
 
   const profile = await prisma.user.findUnique({
     where: {
@@ -33,11 +33,11 @@ export default async function handle(
       },
     },
   })
+
   const readPages = profile?.ratings.reduce(
     (acc, rating) => acc + rating.book.total_pages,
     0,
   )
-
   const ratedBooks = profile?.ratings?.length
 
   const readAuthors = profile?.ratings.reduce((acc, rating) => {
@@ -62,14 +62,12 @@ export default async function handle(
       name: profile?.name,
       member_since: profile?.created_at,
     },
-    ratings: {
-      ratings: profile?.ratings,
-      readPages,
-      ratedBooks,
-      readAuthors: readAuthors?.length,
-      mostReadAuthor,
-      mostReadCategory,
-    },
+    ratings: profile?.ratings,
+    readPages,
+    ratedBooks,
+    readAuthors: readAuthors?.length,
+    mostReadAuthor,
+    mostReadCategory,
   }
 
   return res.json({ profile: profileData })
