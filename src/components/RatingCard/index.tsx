@@ -5,6 +5,7 @@ import {
   BookContent,
   BookDetails,
   BookImage,
+  CompactDetails,
   Container,
   ToogleShowMoreButton,
   UserDetails,
@@ -21,11 +22,17 @@ export type RatingWithAuthorAndBook = Rating & {
   book: Book
 }
 
-type RatingCardProps = { rating: RatingWithAuthorAndBook }
+type RatingCardProps = {
+  rating: RatingWithAuthorAndBook
+  variant?: 'default' | 'compact'
+}
 
 const MAX_SUMMARY_LENGTH = 180
 
-export default function RatingCard({ rating }: RatingCardProps) {
+export default function RatingCard({
+  rating,
+  variant = 'default',
+}: RatingCardProps) {
   const distance = getRelativeTimeString(new Date(rating.created_at), 'pt-BR')
 
   const {
@@ -37,25 +44,28 @@ export default function RatingCard({ rating }: RatingCardProps) {
   const bookImageUrl = rating.book.cover_url.slice(6)
 
   return (
-    <Container>
-      <UserDetails>
-        <section>
-          <Link href={`/profile/${rating.user.id}`}>
-            <Avatar
-              src={rating.user.avatar_url!}
-              size="sm"
-              alt={`Avatar do usuário ${rating.user.name}`}
-            />
-          </Link>
-          <div>
-            <Text>{rating.user.name}</Text>
-            <Text size="sm" color="gray-400">
-              {distance}
-            </Text>
-          </div>
-        </section>
-        <RatingStars rating={rating.rate} />
-      </UserDetails>
+    <Container variant={variant}>
+      {variant === 'default' && (
+        <UserDetails>
+          <section>
+            <Link href={`/profile/${rating.user.id}`}>
+              <Avatar
+                src={rating.user.avatar_url!}
+                size="sm"
+                alt={`Avatar do usuário ${rating.user.name}`}
+              />
+            </Link>
+            <div>
+              <Text>{rating.user.name}</Text>
+              <Text size="sm" color="gray-400">
+                {distance}
+              </Text>
+            </div>
+          </section>
+          <RatingStars rating={rating.rate} />
+        </UserDetails>
+      )}
+
       <BookDetails>
         <Link href={`/explore?book=${rating.book_id}`}>
           <BookImage
@@ -68,6 +78,14 @@ export default function RatingCard({ rating }: RatingCardProps) {
 
         <BookContent>
           <div>
+            {variant === 'compact' && (
+              <CompactDetails>
+                <Text size="sm" color="gray-300">
+                  {distance}
+                </Text>
+                <RatingStars rating={rating.rate} />
+              </CompactDetails>
+            )}
             <Heading>{rating.book.name}</Heading>
             <Text size="sm" color="gray-400">
               {rating.book.author}

@@ -6,10 +6,32 @@ export const Container = styled('div', {
   flexDirection: 'column',
   width: '100%',
   gap: '$4',
-  background: '$gray700',
   padding: '$6',
   borderRadius: '$md',
+
+  variants: {
+    variant: {
+      compact: {
+        background: '$gray600',
+      },
+      default: {
+        background: '$gray700',
+      },
+    },
+  },
+  defaultVariants: {
+    variant: 'default',
+  },
 })
+
+export const CompactDetails = styled('div', {
+  width: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  marginBottom: '$3',
+})
+
 export const UserDetails = styled('div', {
   display: 'flex',
   alignItems: 'start',
