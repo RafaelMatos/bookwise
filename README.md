@@ -1,8 +1,14 @@
 # BookWise 📖
 
-Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha React do curso Ignite na Rocketseat🚀 , utilizando Next como principal ferramenta. Vamos criar uma aplicação completa até o deploy. Abordaremos rotas autenticadas no Next.js conceito de Backend-for-Frontend e muito mais!
+Projeto full-stack em desenvolvimento como desafio do último módulo da trilha React do curso Ignite na Rocketseat🚀 , utilizando Next como principal ferramenta. Vamos criar uma aplicação completa até o deploy. Abordaremos rotas autenticadas no Next.js conceito de Backend-for-Frontend e na aplicação você já pode:
 
-<img src='./public/tela.png' alt='Imagem da tela da aplicação BookWise'>
+- Fazer login com conta Google ou Github, ou entrar como visitante;
+- Fazer filtragem de livros por categoria na página explore
+- Fazer busca de livro por nome do livro ou autor
+- Avaliar livro adicionando comentário e nota para o livro.
+
+
+<img src='./public/tela.gif' alt='Gif da tela da aplicação BookWise'>
 
 <!-- <details>
     <summary>Responsivo</summary>
@@ -66,6 +72,12 @@ Projeto full-stack em desenvolvimento como desafio do ultimo módulo da trilha R
   - <details>
     <summary>Prevenindo de usuário não logado de fazer avaliação no livro</summary>
     <img src='./public/update3.gif' alt='gif de atualização da aplicação Book Wise'>
+    </details>
+  - Criando página de perfil do usuário
+  - Adicionada sessão de detalhes de perfil do usuário
+  - <details>
+    <summary>Adicionada opção de pesquisa de livro nas avaliações do perfil do usuário</summary>
+    <img src='./public/update4.gif' alt='gif de atualização da aplicação Book Wise'>
     </details>
 
 
