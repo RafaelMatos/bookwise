@@ -21,7 +21,8 @@ export const Link = ({
   return (
     <Container
       {...props}
-      href={href}
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      href={href!}
       iconSide={iconSide}
       onClick={onClick}
       as={onClick ? 'button' : undefined}
