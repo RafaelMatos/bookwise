@@ -87,6 +87,7 @@ export const RatingsDialog = ({ children, bookId }: RatingDialogProps) => {
               <BookDetailsWrapper>
                 <BookDetailsContainer>
                   <BookImage
+                    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                     src={book.cover_url!}
                     width={171}
                     height={242}

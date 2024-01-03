@@ -1,4 +1,3 @@
-import { faker } from '@faker-js/faker'
 import { Text } from '../Typography'
 import { RatingWithAuthor, UserRatingCard } from '../UserRatingCard'
 import { Link } from '../ui/Link'

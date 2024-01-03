@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useRouter } from 'next/router'
 import { AuthButton, Container } from './styles'
 import { signIn } from 'next-auth/react'

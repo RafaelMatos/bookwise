@@ -1,6 +1,5 @@
-import { Icon } from '@phosphor-icons/react'
 import { Container } from './styles'
-import { Heading, Text } from '../Typography'
+import { Heading } from '../Typography'
 import { ComponentProps } from '@stitches/react'
 import { ReactNode } from 'react'
 

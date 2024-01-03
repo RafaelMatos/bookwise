@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { NextApiRequest, NextApiResponse } from 'next'
 import { Adapter } from 'next-auth/adapters'
 import { prisma } from '../prisma'
-import NextAuth from 'next-auth/next'
 
 export function PrismaAdapter(
   req: NextApiRequest,

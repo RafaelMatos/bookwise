@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { prisma } from '@/lib/prisma'
-import categories from './categories'
 import { getServerSession } from 'next-auth'
 import { buildNextAuthOptions } from '../auth/[...nextauth]'
 
@@ -57,6 +56,7 @@ export default async function handle(
       (avgRating) => avgRating.book_id === book.id,
     )
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ratings, ...bookInfo } = book
 
     return {

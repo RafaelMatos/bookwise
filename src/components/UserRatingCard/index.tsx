@@ -27,6 +27,7 @@ export const UserRatingCard = ({ rating }: UserRatingCardProps) => {
         <section>
           <Link href={`/profile/${rating.user_id}`}>
             <Avatar
+              // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
               src={rating.user.avatar_url!}
               size="sm"
               alt={`Avatar do usuário ${rating.user.name}`}

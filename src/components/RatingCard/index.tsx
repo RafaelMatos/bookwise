@@ -15,7 +15,6 @@ import { Book, Rating, User } from '@prisma/client'
 import { getRelativeTimeString } from '@/utils/getRelativeTimeString'
 import RatingStars from '../RatingStars'
 import { useToggleShowMore } from '@/hooks/useToogleShowMore'
-import { useState } from 'react'
 
 export type RatingWithAuthorAndBook = Rating & {
   user: User
@@ -50,6 +49,7 @@ export default function RatingCard({
           <section>
             <Link href={`/profile/${rating.user.id}`}>
               <Avatar
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                 src={rating.user.avatar_url!}
                 size="sm"
                 alt={`Avatar do usuário ${rating.user.name}`}

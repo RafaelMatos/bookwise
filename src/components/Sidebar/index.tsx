@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { signOut, useSession } from 'next-auth/react'
 import Navigation from '../Navigation'
 import { Container, LoginButton, UserDetails } from './styles'

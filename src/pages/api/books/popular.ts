@@ -35,6 +35,7 @@ export default async function handle(
     const bookAvgRating = booksAvgRating.find(
       (avgRating) => avgRating.book_id === book.id,
     )
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { ratings, ...bookInfo } = book
     return {
       ...bookInfo,
