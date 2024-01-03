@@ -4,9 +4,9 @@ export const books = [
     name: '14 Hábitos de Desenvolvedores Altamente Produtivos',
     author: 'Zeno Rocha',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
+      'É um livro que ensina desenvolvedores a serem mais produtivos em seu trabalho. O livro apresenta 14 hábitos que podem ser adotados pelos desenvolvedores para melhorar sua produtividade.',
     cover_url:
-      'public/images/books/14-habitos-de-desenvolvedores-altamente-produtivos.jpg',
+      '/images/books/14-habitos-de-desenvolvedores-altamente-produtivos.png',
     total_pages: 160,
     categories: [
       {
@@ -24,8 +24,8 @@ export const books = [
     name: 'O Hobbit',
     author: 'J.R.R. Tolkien',
     summary:
-      'Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh',
-    cover_url: 'public/images/books/o-hobbit.jpg',
+      'É um livro de fantasia que conta a história de Bilbo Bolseiro, um hobbit que se junta a uma expedição para recuperar um tesouro perdido. A jornada de Bilbo o leva a lugares exóticos e a enfrentar perigos inesperados',
+    cover_url: '/images/books/o-hobbit.png',
     total_pages: 360,
     categories: [
       {
@@ -43,8 +43,8 @@ export const books = [
     name: 'O guia do mochileiro das galáxias',
     author: 'Douglas Adams',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/o-guia-do-mochileiro-das-galáxias.jpg',
+      'É uma comédia de ficção científica que conta a história de Arthur Dent, um homem que escapa da destruição da Terra para viajar pelo universo. Ao longo de sua jornada, Arthur conhece uma série de personagens excêntricos e vive aventuras inacreditáveis.',
+    cover_url: '/images/books/o-guia-do-mochileiro-das-galáxias.png',
     total_pages: 250,
     categories: [
       {
@@ -62,8 +62,8 @@ export const books = [
     name: 'A revolução dos bichos',
     author: 'George Orwell',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/a-revolucao-dos-bixos.jpg',
+      'É uma fábula política que conta a história de um grupo de animais que se rebelam contra seus donos humanos. A revolução é bem-sucedida, mas os animais logo descobrem que a liberdade não é o que eles esperavam.',
+    cover_url: '/images/books/a-revolucao-dos-bixos.png',
     total_pages: 350,
     categories: [
       {
@@ -81,8 +81,8 @@ export const books = [
     name: 'O fim da eternidade',
     author: 'Isaac Asimov',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/o-fim-da-eternidade.jpg',
+      'É um conto de ficção científica que conta a história de um homem que trabalha em uma organização que controla o tempo. O homem descobre que a organização está escondendo um segredo que pode mudar o destino da humanidade.',
+    cover_url: '/images/books/o-fim-da-eternidade.png',
     total_pages: 165,
     categories: [
       {
@@ -100,8 +100,8 @@ export const books = [
     name: 'Entendendo Algoritmos',
     author: 'Aditya Y. Bhargava',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/entendendo-algoritmos.jpg',
+      'É um livro que ensina os fundamentos dos algoritmos. O livro cobre uma ampla gama de tópicos, desde algoritmos básicos até algoritmos avançados.',
+    cover_url: '/images/books/entendendo-algoritmos.png',
     total_pages: 165,
     categories: [
       {
@@ -119,8 +119,8 @@ export const books = [
     name: 'Código Limpo',
     author: 'Robert C. Martin',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/codigo-limpo.jpg',
+      'É um livro que ensina os princípios de escrita de código claro, conciso e fácil de entender. O livro cobre tópicos como estrutura de código, nomenclatura, comentários e testes.',
+    cover_url: '/images/books/codigo-limpo.png',
     total_pages: 365,
     categories: [
       {
@@ -138,8 +138,8 @@ export const books = [
     name: 'O poder do hábito',
     author: 'Charles Duhigg',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/o-poder-do-habito.jpg',
+      'É um livro de não-ficção que explora a ciência dos hábitos. O livro explica como os hábitos são formados e como eles podem ser mudados.',
+    cover_url: '/images/books/o-poder-do-habito.png',
     total_pages: 288,
     categories: [
       {
@@ -157,8 +157,8 @@ export const books = [
     name: 'Arquitetura limpa',
     author: 'Robert C. Martin',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/arquitetura-limpa.jpg',
+      'É um livro que ensina os princípios de arquitetura de software. O livro cobre tópicos como design modular, SOLID e arquitetura hexagonal.',
+    cover_url: '/images/books/arquitetura-limpa.png',
     total_pages: 288,
     categories: [
       {
@@ -176,8 +176,8 @@ export const books = [
     name: 'Histórias extraordinárias',
     author: 'Edgar Allan Poe',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/historias-extraordinarias.jpg',
+      'É uma coletânea de contos de terror e mistério escritos por Edgar Allan Poe. Os contos são famosos por sua atmosfera sombria e seus temas macabros.',
+    cover_url: '/images/books/historias-extraordinarias.png',
     total_pages: 332,
     categories: [
       {
@@ -195,8 +195,8 @@ export const books = [
     name: 'Refatoração',
     author: 'Martin Fowler',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/refatoracao.jpg',
+      'É um livro que ensina como melhorar o código existente. O livro apresenta uma série de técnicas que podem ser usadas para tornar o código mais claro, conciso e fácil de manter.',
+    cover_url: '/images/books/refatoracao.png',
     total_pages: 332,
     categories: [
       {
@@ -214,8 +214,8 @@ export const books = [
     name: 'Domain-Driven Design',
     author: 'Eric Evans',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/domain-driven-design.jpg',
+      'É um livro que apresenta uma abordagem para o desenvolvimento de software que se concentra no domínio do problema. O livro cobre tópicos como modelagem de domínio, arquitetura de domínio e testes de domínio.',
+    cover_url: '/images/books/domain-driven-design.png',
     total_pages: 288,
     categories: [
       {
@@ -233,8 +233,8 @@ export const books = [
     name: 'Viagem ao Centro da Terra',
     author: 'Julio Verne',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/viagem-ao-centro-da-terra.jpg',
+      'É um romance de ficção científica que conta a história de um grupo de exploradores que viajam ao centro da Terra. A viagem os leva a lugares exóticos e a enfrentar perigos inimagináveis.',
+    cover_url: '/images/books/viagem-ao-centro-da-terra.png',
     total_pages: 288,
     categories: [
       {
@@ -252,8 +252,8 @@ export const books = [
     name: 'Fragmentos do Horror',
     author: 'Junji Ito',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/fragmentos-do-horror.jpg',
+      'É uma coletânea de histórias de terror escritas por Junji Ito. As histórias são conhecidas por sua arte macabra e seus temas perturbadores.',
+    cover_url: '/images/books/fragmentos-do-horror.png',
     total_pages: 144,
     categories: [
       {
@@ -271,8 +271,8 @@ export const books = [
     name: 'O Programador Pragmático',
     author: 'Andrew Hunt',
     summary:
-      'Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget',
-    cover_url: 'public/images/books/o-programador-pragmatico.jpg',
+      'É um livro que apresenta uma abordagem prática para o desenvolvimento de software. O livro cobre tópicos como design, codificação, teste e manutenção de software.',
+    cover_url: '/images/books/o-programador-pragmatico.png',
     total_pages: 205,
     categories: [
       {

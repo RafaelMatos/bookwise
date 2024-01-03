@@ -68,7 +68,7 @@ export const RatingsDialog = ({ children, bookId }: RatingDialogProps) => {
     book?.categories?.map((category) => category?.category?.name)?.join(', ') ??
     ''
 
-  const bookImageUrl = book?.cover_url?.slice(6)
+  // const bookImageUrl = book?.cover_url?.slice(6)
   const ratingsLength = book?.ratings.length
 
   return (
@@ -87,7 +87,7 @@ export const RatingsDialog = ({ children, bookId }: RatingDialogProps) => {
               <BookDetailsWrapper>
                 <BookDetailsContainer>
                   <BookImage
-                    src={bookImageUrl!}
+                    src={book.cover_url!}
                     width={171}
                     height={242}
                     alt={book.name}

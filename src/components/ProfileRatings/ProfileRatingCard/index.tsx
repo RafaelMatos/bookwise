@@ -11,7 +11,7 @@ type ProfileRatingCardProps = {
 
 export const ProfileRatingCard = ({ rating }: ProfileRatingCardProps) => {
   const distance = getRelativeTimeString(new Date(rating.created_at), 'pt-BR')
-  const bookImageUrl = rating.book.cover_url.slice(6)
+  // const bookImageUrl = rating.book.cover_url.slice(6)
   return (
     <Container>
       <Text size="sm" color="gray-300">
@@ -24,7 +24,7 @@ export const ProfileRatingCard = ({ rating }: ProfileRatingCardProps) => {
             style={{ display: 'flex' }}
           >
             <BookImage
-              src={bookImageUrl}
+              src={rating.book.cover_url}
               alt={rating.book.name}
               width={98}
               height={134}

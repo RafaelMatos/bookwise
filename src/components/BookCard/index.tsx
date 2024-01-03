@@ -30,7 +30,7 @@ export default function BookCard({ book, size = 'md' }: BookCardProps) {
       height: 151,
     },
   }
-  const bookImageUrl = book.cover_url.slice(6)
+  // const bookImageUrl = book.cover_url.slice(6)
   const currentSize = IMAGE_SIZES[size]
 
   return (
@@ -38,7 +38,7 @@ export default function BookCard({ book, size = 'md' }: BookCardProps) {
       <Container>
         {book?.alreadyRead && <ReadBadge>LIDO</ReadBadge>}
         <BookImage
-          src={bookImageUrl}
+          src={book.cover_url}
           alt={book.name}
           width={currentSize.width}
           height={currentSize.height}

@@ -41,7 +41,7 @@ export default function RatingCard({
     toogleShowMore,
   } = useToggleShowMore(rating.book.summary, MAX_SUMMARY_LENGTH)
 
-  const bookImageUrl = rating.book.cover_url.slice(6)
+  // const bookImageUrl = rating.book.cover_url.slice(6)
 
   return (
     <Container variant={variant}>
@@ -69,7 +69,7 @@ export default function RatingCard({
       <BookDetails>
         <Link href={`/explore?book=${rating.book_id}`}>
           <BookImage
-            src={bookImageUrl}
+            src={rating.book.cover_url}
             width={108}
             height={152}
             alt={rating.book.name}
