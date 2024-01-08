@@ -44,7 +44,7 @@ export const books = [
     author: 'Douglas Adams',
     summary:
       'É uma comédia de ficção científica que conta a história de Arthur Dent, um homem que escapa da destruição da Terra para viajar pelo universo. Ao longo de sua jornada, Arthur conhece uma série de personagens excêntricos e vive aventuras inacreditáveis.',
-    cover_url: '/images/books/o-guia-do-mochileiro-das-galáxias.png',
+    cover_url: '/images/books/o-guia-do-mochileiro-das-galaxias.png',
     total_pages: 250,
     categories: [
       {

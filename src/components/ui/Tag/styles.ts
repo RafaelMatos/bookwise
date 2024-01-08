@@ -10,6 +10,7 @@ export const Container = styled('button', {
   transition: '0.2s',
 
   '&:hover': {
+    cursor: 'pointer',
     color: '$gray100',
     background: '$purple100',
   },
